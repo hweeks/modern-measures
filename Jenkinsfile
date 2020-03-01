@@ -54,8 +54,8 @@ pipeline {
         export TAG=$GIT_COMMIT
         docker-compose -f docker-compose.stage.yml stop
         docker-compose -f docker-compose.stage.yml rm -f
-        docker-compose -f docker-compose.stage.yml pull
-        docker-compose -f docker-compose.stage.yml up -d
+        docker-compose -f dc.stage.yml pull
+        docker-compose -f dc.stage.yml up -d
       """
       }
     }

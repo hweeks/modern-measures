@@ -1,6 +1,6 @@
 version: "3.5"
 services:
-  sarah-home:
+  mm-stage:
     image: "hams/mm:${TAG}"
     ports:
       - 4201:4200

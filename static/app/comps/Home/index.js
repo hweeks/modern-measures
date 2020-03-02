@@ -1,5 +1,7 @@
 import { html, Component } from 'https://unpkg.com/htm/preact/standalone.module.js';
 import {Footer} from '../Footer/index.js'
+import {Header} from '../Header/index.js'
+import {Link} from '../Link/index.js'
 
 export class App extends Component {
   addTodo() {
@@ -9,13 +11,10 @@ export class App extends Component {
   render({ page }, { todos = [] }) {
     return html`
       <div class="home-wrapper">
-        <ul>
-          ${todos.map(todo => html`
-            <li>${todo}</li>
-          `)}
-        </ul>
-        <button onClick=${() => this.addTodo()}>Add Todo</button>
-        <${Footer}>footer content here<//>
+        <${Header}><//>
+        <${Footer}>
+          made with 💃🏻 in <${Link} href="https://en.wikipedia.org/wiki/Hudson%27s_Bay_(retailer)">Hudson Bay<//>
+        <//>
       </div>
     `;
   }

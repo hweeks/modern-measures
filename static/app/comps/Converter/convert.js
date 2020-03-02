@@ -33,10 +33,10 @@ const lookupFactor = ({ property, unit }) => {
 }
 
 const convert = ({ property, qty, fromUnit, toUnit }) => {
-  const fromFactor = lookupFactor({ property, unit: fromUnit })
-  const toFactor = lookupFactor({ property, unit: toUnit })
+  const fromFactor = lookupFactor({ property, unit: fromUnit }).factor
+  const toFactor = lookupFactor({ property, unit: toUnit }).factor
 
-  return qty * fromUnit / toUnit
+  return qty * fromFactor / toFactor
 }
 
 export default convert

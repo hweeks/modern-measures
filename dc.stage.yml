@@ -1,0 +1,17 @@
+version: "3.5"
+services:
+  mm-stage:
+    image: "hams/mm:${TAG}"
+    ports:
+      - 4201:4200
+    restart: always
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.mmstage.rule=Host(`stage.modernmeasures.org`)"
+      - "traefik.http.routers.mmstage.entrypoints=websecure"
+      - "traefik.http.routers.mmstage.tls.certresolver=myresolver"
+
+networks:
+  default:
+    external:
+      name: traefik-net

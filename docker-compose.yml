@@ -1,0 +1,18 @@
+
+version: "3.5"
+services:
+  modern:
+    image: "hams/mm:${TAG}"
+    ports:
+      - 4200:4200
+    restart: always
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.mm.rule=Host(`modernmeasures.org`)"
+      - "traefik.http.routers.mm.entrypoints=websecure"
+      - "traefik.http.routers.mm.tls.certresolver=myresolver"
+
+networks:
+  default:
+    external:
+      name: traefik-net

@@ -18,9 +18,8 @@ export class Converter extends Component {
         <div>
           <input
             class="convert-input"
-            type="text"
+            type="number"
             inputmode="numeric"
-            pattern="[0-9]*"
             onInput="${this.converterTemplate(props)}"
           /> ${props.fromUnit}s in ${props.toUnit}s:
         </div>

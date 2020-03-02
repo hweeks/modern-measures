@@ -1,0 +1,18 @@
+:root {
+  --main-bg-color: #dddddd;
+  --main-text-color: #660066;
+  --main-atom-base: .4rem;
+  --main-font-base: 10px;
+  --main-font-multi: 1.6rem;
+  --main-font-head: 2.4rem;
+  --main-font-small: 1.2rem;
+  --primary-color: #fff;
+  --accent-color: #603;
+  --tertiary-color: #888;
+}
+
+html {
+  font-size: var(--main-font-base);
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+}

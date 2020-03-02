@@ -1,0 +1,18 @@
+.big-converter {
+  width: 80vw;
+  min-height: 23vh;
+  padding: 20px;
+  margin-bottom: 15px;
+  margin-top: 3px;
+  border-radius:  20cm;
+  border: 3px dotted var(--accent-color);
+  display: flex;
+  flex-flow: column-reverse;
+  justify-content: center;
+  align-items: center;
+}
+
+.convert-input {
+  background-color: var(--tertiary-color);
+  color: var(--accent-color);
+}

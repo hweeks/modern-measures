@@ -14,9 +14,10 @@ export class Converter extends Component {
 
   render (props, { converted = 0 }) {
     return html`
-      <section>
+      <section class="big-converter">
         <div>
           <input
+            class="convert-input"
             type="text"
             inputmode="numeric"
             pattern="[0-9]*"

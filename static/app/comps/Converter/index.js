@@ -4,7 +4,7 @@ import convert from './convert.js';
 export class Converter extends Component {
   converterTemplate ({ property, fromUnit, toUnit }) {
     return ({ target }) => {
-      const { converted = 0 } = this.state;
+      const { converted } = this.state;
       const { value } = target
       const qty = Number(value)
 
@@ -15,7 +15,14 @@ export class Converter extends Component {
   render (props, { converted = 0 }) {
     return html`
       <section>
-        <div><input type="number" onInput="${this.converterTemplate(props)}" /> ${props.fromUnit}s in ${props.toUnit}s:</div>
+        <div>
+          <input
+            type="text"
+            inputmode="numeric"
+            pattern="[0-9]*"
+            onInput="${this.converterTemplate(props)}"
+          /> ${props.fromUnit}s in ${props.toUnit}s:
+        </div>
         <div>${converted}</div>
         <div>${props.children}</div>
       </section>

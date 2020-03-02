@@ -14,8 +14,8 @@ export class Converter extends Component {
 
   render (props, { converted = 0 }) {
     return html`
-      <section>
-        <div><input type="number" onInput="${this.converterTemplate(props)}" /> ${props.fromUnit}s in ${props.toUnit}s:</div>
+      <section class="big-converter">
+        <div><input class="convert-input" type="number" onInput="${this.converterTemplate(props)}" /> ${props.fromUnit}s in ${props.toUnit}s:</div>
         <div>${converted}</div>
         <div>${props.children}</div>
       </section>

@@ -1,14 +1,8 @@
-import {
-  ReactDOM,
-} from "https://unpkg.com/es-react";
-import {Home} from './comps/Home/index.js'
-import {html} from './tools.js'
-
+import { html, render } from 'https://unpkg.com/htm/preact/standalone.module.js';
+import {App} from './comps/Home/index.js'
 const renderNode = document.getElementById('home')
 
-ReactDOM.render(
-  Home(html`
-    <h1>lol</h1>
-  `),
+render(
+  html`<${App} page="All" />`,
   renderNode
 );

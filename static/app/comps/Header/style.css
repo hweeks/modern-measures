@@ -1,0 +1,10 @@
+.big-header {
+  font-size: var(--main-font-head);
+}
+
+.wrap-header {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}

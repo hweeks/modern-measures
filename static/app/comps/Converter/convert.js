@@ -4,9 +4,17 @@ const measures = [
     property: 'length',
     factor: 109.7
   }, {
+    unit: 'beard year',
+    property: 'length',
+    factor: 0.3156 
+  }, {
     unit: 'swimming pool',
     property: 'volume',
     factor: 2500000
+  }, {
+    unit: 'hogshead',
+    property: 'volume',
+    factor: 286.4
   }, {
     unit: 'football field',
     property: 'area',
